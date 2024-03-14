@@ -8,6 +8,7 @@
   ],
   "main": "./dist/cme-components.cjs",
   "module": "./dist/cme-components.js",
+  "types": "./dist/cme-components.d.ts",
   "exports": {
     ".": {
       "import": "./dist/cme-components.js",

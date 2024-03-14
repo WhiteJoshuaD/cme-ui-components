@@ -7,7 +7,8 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
-      include: ['src/components', 'src/types'],
+      insertTypesEntry: true,
+      include: ['src/components', 'src/types', 'src/index.ts'],
       exclude: ['src/components/ui'],
     }),
   ],
