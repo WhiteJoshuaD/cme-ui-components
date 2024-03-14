@@ -13,7 +13,8 @@
     ".": {
       "import": "./dist/cme-components.js",
       "require": "./dist/cme-components.cjs"
-    }
+    },
+    "./css": "./dist/style.css"
   },
   "scripts": {
     "dev": "vite",
