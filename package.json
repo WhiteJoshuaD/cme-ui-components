@@ -14,7 +14,10 @@
       "import": "./dist/cme-components.js",
       "require": "./dist/cme-components.cjs"
     },
-    "./css": "./dist/style.css"
+    "./dist/*.css": {
+      "import": "./dist/*.css",
+      "require": "./dist/*.css"
+    }
   },
   "scripts": {
     "dev": "vite",
