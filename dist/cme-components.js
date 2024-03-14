@@ -3841,7 +3841,7 @@ const st = (e) => {
   for (const r of lr)
     t[r] = (n, o) => qe.create(n, Le(e, o, { method: r }));
   return t.create = (r) => st(Le(r)), t.extend = (r) => st(Le(e, r)), t.stop = ur, t;
-}, wo = st(), xo = wo.create({ prefixUrl: "http://localhost:5000" });
+}, wo = st(), xo = wo.create({ prefixUrl: "https://cme-api.azurewebsites.net" });
 async function _o(e) {
   return (await xo.get("credit-types", {
     headers: {
