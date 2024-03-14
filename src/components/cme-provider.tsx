@@ -1,3 +1,5 @@
+import '../index.css';
+
 import { createContext, useContext } from 'react';
 
 const CmeContext = createContext<{ publishableKey: string } | undefined>(
