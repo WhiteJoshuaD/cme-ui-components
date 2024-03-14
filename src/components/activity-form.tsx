@@ -40,6 +40,8 @@ export function ActivityForm({ onSubmit }: ActivityFormProps) {
 
     const values = {
       name: formData.get('name') as string,
+      startsAt: formData.get('startDate') as string,
+      endsAt: formData.get('endDate') as string,
       description: formData.get('description') as string,
       location: formData.get('location') as string,
       credits,
@@ -66,19 +68,33 @@ export function ActivityForm({ onSubmit }: ActivityFormProps) {
             <Label className="cme-w-fit" htmlFor="name">
               Name
             </Label>
-            <Input id="name" />
+            <Input id="name" name="name" required />
+          </div>
+          <div className="cme-grid cme-grid-cols-2 cme-gap-4">
+            <div className="cme-grid cme-w-full cme-items-center cme-gap-2">
+              <Label className="cme-w-fit" htmlFor="start-date">
+                Start Date
+              </Label>
+              <Input type="date" id="start-date" name="startDate" required />
+            </div>
+            <div className="cme-grid cme-w-full cme-items-center cme-gap-2">
+              <Label className="cme-w-fit" htmlFor="end-date">
+                End Date
+              </Label>
+              <Input type="date" id="end-date" name="endDate" required />
+            </div>
           </div>
           <div className="cme-grid cme-w-full cme-items-center cme-gap-2">
             <Label className="cme-w-fit" htmlFor="description">
               Description
             </Label>
-            <Textarea id="description" />
+            <Textarea id="description" name="description" required />
           </div>
           <div className="cme-grid cme-w-full cme-items-center cme-gap-2">
             <Label className="cme-w-fit" htmlFor="location">
               Location
             </Label>
-            <Input id="location" />
+            <Input id="location" name="location" />
           </div>
         </div>
       </div>
@@ -127,7 +143,7 @@ function Credits() {
 
 function CreditTypeInput({ creditType }: { creditType: CreditType }) {
   return (
-    <div className="cme-group cme-overflow-hidden cme-transition cme-rounded-md cme-bg-gray-100 cme-border cme-border-input [&:has(:checked)]:cme-border-foreground/15">
+    <div className="cme-group cme-overflow-hidden cme-rounded-md cme-border cme-border-input cme-bg-gray-100 cme-transition [&:has(:checked)]:cme-border-foreground/15">
       <div className="cme-flex cme-shrink-0 cme-items-center cme-gap-x-2 cme-rounded-b-md cme-bg-white cme-p-4 cme-transition group-has-[:checked]:cme-shadow-md">
         <Switch
           name="creditTypeId"
@@ -141,7 +157,7 @@ function CreditTypeInput({ creditType }: { creditType: CreditType }) {
           {creditType.name}
         </Label>
       </div>
-      <div className="cme-grid cme-grid-cols-1 cme-grid-rows-[0fr] cme-opacity-0 cme-transition-all group-has-[:checked]:cme-opacity-100 group-has-[:checked]:cme-grid-rows-[1fr]">
+      <div className="cme-grid cme-grid-cols-1 cme-grid-rows-[0fr] cme-opacity-0 cme-transition-all group-has-[:checked]:cme-grid-rows-[1fr] group-has-[:checked]:cme-opacity-100">
         <div className="cme-overflow-hidden">
           <div className="cme-flex cme-items-center cme-gap-x-8 cme-px-4 cme-py-3">
             <p className="cme-text-sm cme-font-medium cme-leading-6">
