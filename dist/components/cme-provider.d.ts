@@ -1,5 +1,4 @@
 /// <reference types="react" />
-import '../index.css';
 export declare function CmeProvider({ publishableKey, children, }: {
     publishableKey: `pk_${string}`;
     children: React.ReactNode;
