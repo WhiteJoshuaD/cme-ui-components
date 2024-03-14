@@ -15,7 +15,7 @@ export function CmeProvider({
 }) {
   return (
     <CmeContext.Provider value={{ publishableKey }}>
-      {children}
+      <div data-cme-component>{children}</div>
     </CmeContext.Provider>
   );
 }

@@ -3484,7 +3484,7 @@ function Ao({
   publishableKey: e,
   children: t
 }) {
-  return /* @__PURE__ */ g(ir.Provider, { value: { publishableKey: e }, children: t });
+  return /* @__PURE__ */ g(ir.Provider, { value: { publishableKey: e }, children: /* @__PURE__ */ g("div", { "data-cme-component": !0, children: t }) });
 }
 function oo() {
   const e = it(ir);

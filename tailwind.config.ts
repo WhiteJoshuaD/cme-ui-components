@@ -1,4 +1,8 @@
 import tailwindCssAnimate from 'tailwindcss-animate';
+import {
+  scopedPreflightStyles,
+  isolateForComponents,
+} from 'tailwindcss-scoped-preflight';
 import type { Config } from 'tailwindcss';
 
 const config = {
@@ -70,7 +74,14 @@ const config = {
       },
     },
   },
-  plugins: [tailwindCssAnimate],
+  plugins: [
+    tailwindCssAnimate,
+    scopedPreflightStyles({
+      isolationStrategy: isolateForComponents(['[data-cme-component]'], {
+        remove: ['html, body, :before', ':after'],
+      }),
+    }),
+  ],
 } satisfies Config;
 
 export default config;

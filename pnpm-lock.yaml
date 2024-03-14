@@ -85,6 +85,9 @@ devDependencies:
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
+  tailwindcss-scoped-preflight:
+    specifier: 3.0.0-beta.13
+    version: 3.0.0-beta.13(postcss@8.4.35)(tailwindcss@3.4.1)
   typescript:
     specifier: ^5.2.2
     version: 5.4.2
@@ -2554,6 +2557,16 @@ packages:
     dependencies:
       tailwindcss: 3.4.1
     dev: false
+
+  /tailwindcss-scoped-preflight@3.0.0-beta.13(postcss@8.4.35)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-s6cB5b5dViv5ipovHWgDaLfdYZRY7cIG0NWUOTFz9xjNHcyEQkeL/D3g6XOsJdWb1DV9+utTEGx+4owxap3PaA==}
+    peerDependencies:
+      postcss: ^8
+      tailwindcss: ^3
+    dependencies:
+      postcss: 8.4.35
+      tailwindcss: 3.4.1
+    dev: true
 
   /tailwindcss@3.4.1:
     resolution: {integrity: sha512-qAYmXRfk3ENzuPBakNK0SRrUDipP8NQnEY6772uDhflcQz5EhRdD7JNZxyrFHVQNCwULPBn6FNPp9brpO7ctcA==}
